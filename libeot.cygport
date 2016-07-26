@@ -1,0 +1,21 @@
+NAME="libeot"
+VERSION=0.01
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Embedded OpenType font parser library"
+DESCRIPTION="Library for parsing Embedded OpenType files, and converting them
+to other formats."
+HOMEPAGE="https://github.com/umanwizard/libeot"
+SRC_URI="${HOMEPAGE}/archive/v${VERSION}/libeot-v${VERSION}.tar.gz"
+PATCH_URI="0.01-no-undefined.patch"
+
+PKG_NAMES="libeot0 libeot-devel libeot-tools"
+libeot0_CONTENTS="usr/bin/cygeot-0.dll usr/share/doc/"
+libeot_devel_CONTENTS="
+	usr/include/libeot/
+	usr/lib/libeot.dll.a
+	usr/lib/pkgconfig/libeot.pc
+"
+libeot_tools_CATEGORY="Graphics"
+libeot_tools_SUMMARY="EOT to TTF conversion utility"
+libeot_tools_CONTENTS="usr/bin/eot*.exe"
